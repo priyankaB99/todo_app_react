@@ -1,0 +1,36 @@
+#body {
+    padding: 40px 20px;
+}
+#addForm, #mainSection {
+    width: 400px;
+    margin: 45px auto;
+}
+.todoItem {
+    width: 345px;
+    padding: 10px;
+    overflow-wrap: break-word;
+}
+.close {
+    padding: 10px 0;
+}
+.checked {
+    text-decoration: line-through;
+    color: rgb(163, 163, 163);
+}
+
+@media (min-width: 5px) and (max-width: 550px) {
+    #addForm, #mainSection {
+        width: 85% !important;
+    }
+    .todoItem {
+        width:70% !important;
+    }
+}
+@media (min-width: 5px) and (max-width: 300px) {
+    #addForm, #mainSection {
+        width: 90% !important;
+    }
+    .todoItem {
+        width:65% !important;
+    }
+}
