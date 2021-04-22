@@ -5,11 +5,22 @@
     width: 400px;
     margin: 45px auto;
 }
-.todoItem {
+.todoWrapper {
     width: 345px;
-    padding: 10px;
+    padding: 10px 0;
+}
+.todoItem {
+    width: max-content;
+    max-width: 335px;
     overflow-wrap: break-word;
 }
+.todoItem:hover {
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+
+
 .close {
     padding: 10px 0;
 }

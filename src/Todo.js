@@ -87,27 +87,25 @@ class Todo extends Component {
     }
 
     render() {
-        let todoName = "todoItem" + this.state.todoId;
-        let checkbox;
+        let done;
         let checked;
         console.log("PRINT ITEM", this.state.completed)
         if (this.props.completed) {
             checked = " checked"
-            checkbox = (<input type="checkbox" checked className={this.state.todoId + " true"} name={todoName} onChange={this.completeTodo}></input>);
+            done = " true "
+            // checkbox = (<input type="checkbox" checked className={this.state.todoId + " true"} name={todoName} onChange={this.completeTodo}></input>);
         }
         else {
             checked = "";
-            checkbox = (<input type="checkbox" className={this.state.todoId + " false"} name={todoName} onChange={this.completeTodo}></input>);
+            done = " false "
+            // checkbox = (<input type="checkbox" className={this.state.todoId + " false"} name={todoName} onChange={this.completeTodo}></input>);
         }
         return (
             <div>
                 <div className="input-group mb-3">
-                    <div className="input-group-prepend">
-                        <div className="input-group-text">
-                            {checkbox}
-                        </div>
-                    </div>
-                    <label htmlFor={todoName} className={"form-check-label todoItem" + checked}> {this.state.text}</label>
+                    <div className="todoWrapper">
+                        <h6 className={this.state.todoId + done + "form-check-label todoItem" + checked} onClick={this.completeTodo}> {this.state.text}</h6>
+                    </div>   
                     <span className={"close " + this.state.todoId} onClick={this.deleteTodo}>X</span><br></br>
                 </div>
             </div>

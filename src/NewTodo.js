@@ -35,7 +35,7 @@ class NewTodo extends Component {
             // Wait for readyState = 4 & 200 response
             if (this.readyState === 4 && this.status === 200) {
                 // parse JSON response
-                var todo = JSON.parse(this.responseText);
+                console.log(JSON.parse(this.responseText));
                 currentComponent.setState({
                     todoInput : ""
                 })
