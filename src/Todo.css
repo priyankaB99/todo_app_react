@@ -6,12 +6,12 @@
     margin: 45px auto;
 }
 .todoWrapper {
-    width: 345px;
+    width: 375px;
     padding: 10px 0;
 }
 .todoItem {
     width: max-content;
-    max-width: 335px;
+    max-width: 365px;
     overflow-wrap: break-word;
 }
 .todoItem:hover {
@@ -33,15 +33,12 @@
     #addForm, #mainSection {
         width: 85% !important;
     }
-    .todoItem {
-        width:70% !important;
+    .todoWrapper {
+        width:90% !important;
     }
 }
 @media (min-width: 5px) and (max-width: 300px) {
     #addForm, #mainSection {
         width: 90% !important;
-    }
-    .todoItem {
-        width:65% !important;
     }
 }
